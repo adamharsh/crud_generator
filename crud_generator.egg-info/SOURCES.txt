@@ -1,0 +1,6 @@
+crud_generator.py
+setup.py
+crud_generator.egg-info/PKG-INFO
+crud_generator.egg-info/SOURCES.txt
+crud_generator.egg-info/dependency_links.txt
+crud_generator.egg-info/top_level.txt
