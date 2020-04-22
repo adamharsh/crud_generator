@@ -1,3 +1,4 @@
+README.md
 crud_generator.py
 setup.py
 crud_generator.egg-info/PKG-INFO
