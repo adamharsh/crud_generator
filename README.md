@@ -15,7 +15,7 @@ This will generate a crud operations (crud.py) for your Database tables.
 
 *   functions created by the functions are
 
-    #First:
+#   #First:
 *   def create_conn():
 *   this function is an empty function where you can create your connections. You can choose any DB, import library accordingly.
 *   Following is the code which you will get.
@@ -26,7 +26,7 @@ This will generate a crud operations (crud.py) for your Database tables.
 *   #conn = psycopg2.connect(database = "testdb", user = "postgres", password = "pass123", host = "127.0.0.1", port = "5432")
 *   #then return conn
 
-    #Second:
+#   #Second:
 *   def create_tablename(values):
 *   this function will perform insert operation in table.
 *   Here, you just need to pass values of the attributes
@@ -34,7 +34,7 @@ This will generate a crud operations (crud.py) for your Database tables.
 *   You can see the sql query in CLI
 *   Ensure to pass values as raw input.
 
-    #Third:
+#   #Third:
 *   def read_Employee(condition="1=1"):
 *   this function will perform read operation in table.
 *   Here, if you don't pass any parameters it will return all records or you can pass any condition.
@@ -42,7 +42,7 @@ This will generate a crud operations (crud.py) for your Database tables.
 *   You can see the sql query in CLI
 *   Ensure to pass values as raw input.
 
-    #Fourth:
+#   #Fourth:
 *   def update_Employee(values,condition="1=1"):
 *   this function will perform update operation in table.
 *   Here, if you don't pass any condition it will perform update on all records or you can pass any condition.
@@ -51,7 +51,7 @@ This will generate a crud operations (crud.py) for your Database tables.
 *   You can see the sql query in CLI
 *   Ensure to pass values as raw input.
 
-    #Fifth:
+#   #Fifth:
 *   def delete_Employee(condition="1=1"):
 *   this function will perform delete operation in table.
 *   Here, if you don't pass any parameters it will delete all records or you can pass any condition.
