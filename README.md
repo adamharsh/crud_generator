@@ -5,6 +5,7 @@ This will generate a crud operations (crud.py) for your Database tables.
 
 # Step 1:
 
+*   from crud_generator import generate_crud
 *   generate_crud(tablename, attributes) is the function which will create crud_tablename.py file
 *   Table name and attributes/column name are the only two parameters to be passed.
 *   Eg: generate_crud("Employee","Name,Age,Employee_code,Salary")
@@ -14,32 +15,33 @@ This will generate a crud operations (crud.py) for your Database tables.
 
 *   functions created by the functions are
 
-*   #First:
+    #First:
 *   def create_conn():
 *   this function is an empty function where you can create your connections. You can choose any DB, import library accordingly.
 *   Following is the code which you will get.
 *   def create_conn():
-    pass
-    #Enter your connection code
-    #Example: for postgresql
-    #conn = psycopg2.connect(database = "testdb", user = "postgres", password = "pass123", host = "127.0.0.1", port = "5432")
-    #then return conn
+*   pass
+*   #Enter your connection code
+*   #Example: for postgresql
+*   #conn = psycopg2.connect(database = "testdb", user = "postgres", password = "pass123", host = "127.0.0.1", port = "5432")
+*   #then return conn
 
-*   #Second:
+    #Second:
 *   def create_tablename(values):
 *   this function will perform insert operation in table.
 *   Here, you just need to pass values of the attributes
-*   Eg: create_Employee("Alex,26,EMP_2760,29000") #Name,Age,Employee_code,Salary
+*   Eg: create_Employee("""'Alex',26,'EMP_2760',29000""") #Name,Age,Employee_code,Salary
 *   You can see the sql query in CLI
+*   Ensure to pass values as raw input.
 
-*   #Third:
+    #Third:
 *   def read_Employee(condition="1=1"):
 *   this function will perform read operation in table.
 *   Here, if you don't pass any parameters it will return all records or you can pass any condition.
 *   Eg: read_Employee("Salary=2900 and Employee_code=\'EMP_2760\'") # condition similary to that in where clause can be passed here.
 *   You can see the sql query in CLI
 
-*   #Fourth:
+    #Fourth:
 *   def update_Employee(values,condition="1=1"):
 *   this function will perform update operation in table.
 *   Here, if you don't pass any condition it will perform update on all records or you can pass any condition.
@@ -47,7 +49,7 @@ This will generate a crud operations (crud.py) for your Database tables.
 *   Eg: update_Employee("Salary=30000","Name=\'Alex\'") # condition similary to that in where clause can be passed here and values like     that in update statement.
 *   You can see the sql query in CLI
 
-*   #Fifth:
+    #Fifth:
 *   def delete_Employee(condition="1=1"):
 *   this function will perform delete operation in table.
 *   Here, if you don't pass any parameters it will delete all records or you can pass any condition.

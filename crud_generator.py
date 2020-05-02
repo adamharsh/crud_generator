@@ -22,16 +22,10 @@ def generate_crud(table_name, attributes):
     print(function_string_connection)
 
     function_string_create = """def create_{0}(values):
-    attr_list = values.split(\",\")
-    attributes_str = \"\"
-    for i in attr_list:
-        attributes_str += \"\\\'\" + i + \"\\\'\"
-        attributes_str += \',\'
-    attributes_str = attributes_str[:-1]
-    print(attributes_str)
+    print(values)
     conn = create_conn()
     cur = conn.cursor()
-    sql = \"insert into {0}({1}) values({2}{3});\".format(attributes_str)
+    sql = \"insert into {0}({1}) values({2}{3});\".format(values);
     print(sql)
     try:
         cur.execute(sql)
