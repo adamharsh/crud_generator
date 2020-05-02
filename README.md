@@ -38,20 +38,23 @@ This will generate a crud operations (crud.py) for your Database tables.
 *   def read_Employee(condition="1=1"):
 *   this function will perform read operation in table.
 *   Here, if you don't pass any parameters it will return all records or you can pass any condition.
-*   Eg: read_Employee("Salary=2900 and Employee_code=\'EMP_2760\'") # condition similary to that in where clause can be passed here.
+*   Eg: read_Employee("""Salary=2900 and Employee_code='EMP_2760'""") # condition similary to that in where clause can be passed here.
 *   You can see the sql query in CLI
+*   Ensure to pass values as raw input.
 
     #Fourth:
 *   def update_Employee(values,condition="1=1"):
 *   this function will perform update operation in table.
 *   Here, if you don't pass any condition it will perform update on all records or you can pass any condition.
 *   Here, you can pass values like "salary=30000", just like you pass in sql.
-*   Eg: update_Employee("Salary=30000","Name=\'Alex\'") # condition similary to that in where clause can be passed here and values like     that in update statement.
+*   Eg: update_Employee("""Salary=30000""","""Name='Alex'""") # condition similary to that in where clause can be passed here and values like     that in update statement.
 *   You can see the sql query in CLI
+*   Ensure to pass values as raw input.
 
     #Fifth:
 *   def delete_Employee(condition="1=1"):
 *   this function will perform delete operation in table.
 *   Here, if you don't pass any parameters it will delete all records or you can pass any condition.
-*   Eg: delete_Employee("Salary=2900 and Employee_code=\'EMP_2760\'") # condition similary to that in where clause can be passed here.
+*   Eg: delete_Employee("""Salary=2900 and Employee_code='EMP_2760'""") # condition similary to that in where clause can be passed here.
 *   You can see the sql query in CLI
+*   Ensure to pass values as raw input.
